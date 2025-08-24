@@ -1,8 +1,6 @@
 import axios from "axios";
 
-const api = axios.create({
-  baseURL: "http://localhost:8080",
-});
+export const api = axios.create({ baseURL: "" }); // same-origin
 
 // 고정 확장자
 export const getFixedExtensions = () => api.get("/extensions/fixed");
