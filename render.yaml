@@ -4,10 +4,23 @@ services:
     env: docker
     plan: free
     autoDeploy: true
+    runtime: docker
     envVars:
       - key: SPRING_DATASOURCE_URL
-        sync: false
+        fromDatabase:
+          name: fileblock-postgres
+          property: connectionString
       - key: SPRING_DATASOURCE_USERNAME
-        sync: false
+        fromDatabase:
+          name: fileblock-postgres
+          property: user
       - key: SPRING_DATASOURCE_PASSWORD
-        sync: false
+        fromDatabase:
+          name: fileblock-postgres
+          property: password
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+
+databases:
+  - name: fileblock-postgres
+    plan: free
