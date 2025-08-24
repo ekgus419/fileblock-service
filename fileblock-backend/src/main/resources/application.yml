@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: fileblock
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/fileblock
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create   # 개발 단계: update / 운영 단계: validate 권장
+    defer-datasource-initialization: true   # 추가!!
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+
+  sql:
+    init:
+      mode: always
+
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+
+server:
+  port: 8080

@@ -1,0 +1,52 @@
+# -------------------------
+# Global
+# -------------------------
+*.log
+*.tmp
+*.swp
+*.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.iml
+
+# -------------------------
+# Node (Frontend)
+# -------------------------
+fileblock-frontend/node_modules/
+fileblock-frontend/.npm/
+fileblock-frontend/.yarn/
+fileblock-frontend/dist/
+fileblock-frontend/.env
+fileblock-frontend/.env.local
+fileblock-frontend/.env.*.local
+
+# -------------------------
+# Java / Gradle (Backend)
+# -------------------------
+fileblock-backend/build/
+fileblock-backend/.gradle/
+fileblock-backend/out/
+fileblock-backend/.classpath
+fileblock-backend/.project
+fileblock-backend/.settings/
+
+# Gradle wrapper는 반드시 포함해야 하므로 무시하지 않음
+# (gradlew, gradlew.bat, gradle/wrapper/**)
+
+# -------------------------
+# Docker / Env
+# -------------------------
+*.pid
+*.seed
+*.pid.lock
+.env
+.env.*
+
+docker-compose.override.yml
+
+# -------------------------
+# OS generated
+# -------------------------
+ehthumbs.db
+Icon?
